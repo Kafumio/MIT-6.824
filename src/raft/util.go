@@ -94,3 +94,7 @@ func (rf *Raft) sendSnapShot(server int, args *InstallSnapshotArgs, reply *Insta
 	ok := rf.peers[server].Call("Raft.InstallSnapShot", args, reply)
 	return ok
 }
+
+func (rf *Raft) GetRaftStateSize() int {
+	return rf.persister.RaftStateSize()
+}
