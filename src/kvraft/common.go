@@ -17,7 +17,7 @@ type PutAppendArgs struct {
 	// Field names must start with capital letters,
 	// otherwise RPC will break.
 	SeqId    int   // 操作的唯一标识
-	ClientId int64 // 客户端id
+	ClientId int64 // 客户端Id
 }
 
 type PutAppendReply struct {
